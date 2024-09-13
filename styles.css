@@ -1,0 +1,419 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2e7d32; /* Cor verde escuro */
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Permite quebra em dispositivos menores */
+}
+
+/* Estilo da imagem do logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-imagem {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header .logo h1 {
+    color: #fff;
+    font-size: 1.5rem; /* Tamanho ajustado para mobile */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .botao-emergencia {
+    background-color: #66bb6a; /* Cor verde claro */
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Responsividade para Header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    header .botao-emergencia {
+        margin-top: 20px;
+        width: 80%;
+    }
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-banner {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.texto-banner h2 {
+    font-size: 2rem;
+}
+
+.texto-banner p {
+    font-size: 1.2rem;
+}
+
+.texto-banner .botao-acao {
+    background-color: #66bb6a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Responsividade para Banner */
+@media (max-width: 768px) {
+    .texto-banner h2 {
+        font-size: 1.8rem;
+    }
+
+    .texto-banner p {
+        font-size: 1rem;
+    }
+}
+
+/* Seções */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Serviços */
+.servico-lista {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.servico-item {
+    width: 250px;
+    margin: 15px;
+}
+
+.servico-item img {
+    width: 250px;
+    height: 200px;
+}
+
+.servico-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Formulário */
+.solicitar form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.solicitar label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.solicitar input, .solicitar select, .solicitar textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.solicitar textarea {
+    height: 100px;
+    resize: none;
+}
+
+.solicitar input[type="file"] {
+    padding: 5px;
+}
+
+.solicitar button {
+    width: 100%;
+    padding: 15px;
+    background-color: #66bb6a;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.solicitar button:hover {
+    background-color: #43a047;
+}
+
+/* Depoimentos */
+.depoimento-item {
+    max-width: 600px;
+    margin: 20px auto;
+    font-style: italic;
+}
+
+.depoimento-item h4 {
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Contato */
+.contato p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Ajustes para Mobile */
+@media (max-width: 768px) {
+    .servico-lista {
+        flex-direction: column;
+    }
+
+    .servico-item {
+        width: 100%;
+    }
+}
+
+/* Seção Sobre Nós */
+.sobre {
+    background-color: #f4f4f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2e7d32; /* Cor verde */
+}
+
+.sobre-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-conteudo .introducao {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+/* Destaques de Sobre Nós */
+.sobre-destaques {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.destaque-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destaque-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destaque-item h3 {
+    color: #2e7d32; /* Cor verde */
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+}
+
+.destaque-item p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.destaque-icone {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-destaques {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destaque-item {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Seção Solicitar Assistência */
+.solicitar {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.solicitar h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #2e7d32;
+    text-align: center;
+}
+
+.solicitar-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.solicitar-conteudo .introducao {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.solicitar-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+.localizacao-btn {
+    background-color: #2e7d32;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.localizacao-btn:hover {
+    background-color: #1b5e20;
+}
+
+.botao-enviar {
+    background-color: #66bb6a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.botao-enviar:hover {
+    background-color: #43a047;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .solicitar-conteudo {
+        padding: 0 15px;
+    }
+
+    .solicitar-form {
+        padding: 20px;
+    }
+}
+
